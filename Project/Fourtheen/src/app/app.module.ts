@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MuralComponent } from './mural/mural.component';
@@ -8,6 +7,8 @@ import { NavComponent } from './nav/nav.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { ImageComponent } from './image/image.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     NavComponent,
     LoginComponent,
     PerfilComponent,
-    CadastroComponent
+    CadastroComponent,
+    ImageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

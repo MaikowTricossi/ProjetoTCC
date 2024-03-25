@@ -1,13 +1,16 @@
-<nav class="navbar bg-body-tertiary">
-    <form class="container-fluid">
-      <div class="input-group">
-        <ul class="nav justify-content-end">
+<nav class="navbar bg-subtle">
+  <div class="container-fluid d-flex justify-content-between">
+      <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link Inicio" aria-current="page" href="#">Início</a>
+              <a class="nav-link Inicio" aria-current="page" href="#">Início</a>
           </li>
-        </ul>
-        <span class="input-group-text" id="basic-addon1">&#64;</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-    </form>
-  </nav>
+          <li class="nav-item">
+              <a class="nav-link Inicio" routerLink="/cadastro">Cadastro</a>
+          </li>
+      </ul>
+      <form class="input-group">
+          <span class="input-group-text" id="basic-addon1">&#64;</span>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </form>
+  </div>
+</nav>
