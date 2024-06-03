@@ -1,0 +1,30 @@
+<div class="bg-dark text-white">
+<section class="vh-100 mt-1">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-left h-100">
+        <img src="assets/foto1.jpg" alt="Minha Imagem" class="logoInicio">
+        <div class="col-md-10 col-lg-10 col-xl-5 offset-xl-1">
+          <form [formGroup]="loginForm" (submit)="loginSubmit()">
+            <div class="form-outline mb-1 mt-5">
+              <input type="text" formControlName="email" class="form-control form-control-lg" />
+              <label class="form-label" for="form1Example13">Email address</label>
+            </div>
+            <div class="form-outline mb-1">
+              <input type="text" formControlName="senha"  class="form-control form-control-lg" />
+              <label class="form-label" for="form1Example23">Password</label>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-md-10">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="password" checked />
+                <label class="form-check-label" for="form1Example3"> Remember me </label>
+              </div>
+                <a href="#!">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Fourtheen_WebAPI.props" />
+</Project>
