@@ -4,13 +4,13 @@
       <div class="row d-flex align-items-center justify-content-left h-100">
         <img src="assets/foto1.jpg" alt="Minha Imagem" class="logoInicio">
         <div class="col-md-10 col-lg-10 col-xl-5 offset-xl-1">
-          <form>
+          <form [formGroup]="loginForm" (submit)="loginSubmit()">
             <div class="form-outline mb-1 mt-5">
-              <input type="email" id="form1Example13" class="form-control form-control-lg" />
+              <input type="text" formControlName="email" class="form-control form-control-lg" />
               <label class="form-label" for="form1Example13">Email address</label>
             </div>
             <div class="form-outline mb-1">
-              <input type="password" id="loginID" class="form-control form-control-lg" />
+              <input type="password" formControlName="senha"  class="form-control form-control-lg" />
               <label class="form-label" for="form1Example23">Password</label>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-md-10">
@@ -20,7 +20,7 @@
               </div>
                 <a href="#!">Forgot password?</a>
             </div>
-            <a class="btn btn-primary btn-lg btn-block mt-3">Sign in</a>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Sign in</button>
           </form>
         </div>
       </div>
