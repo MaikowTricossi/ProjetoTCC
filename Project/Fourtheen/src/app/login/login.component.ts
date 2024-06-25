@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
   email: string = '';
   senha: string = '';
- 
+  errorMessage: string = '';
 
   constructor(private fb: FormBuilder,
     private authService: AuthService
@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
       },
       (err: any) => {
         console.log('Erro ao tentar login:', err);
+        this.errorMessage = 'Login não encontrado. Verifique suas credenciais.';
       }
     );
   }

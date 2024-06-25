@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <h2>Administração de Usuários</h2>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Pesquisar por email" [(ngModel)]="searchEmail">
+    <button class="btn btn-primary mt-2" (click)="searchUser()">Pesquisar</button>
+  </div>
+
+  <div *ngIf="foundUser" class="mt-4">
+    <h3>Usuário Encontrado</h3>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Apelido</th>
+          <th>Data De Nascimento</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ foundUser.id }}</td>
+          <td>{{ foundUser.nome }}</td>
+          <td>{{ foundUser.apelido }}</td>
+          <td>{{ foundUser.dataDeNascimento }}</td>
+          <td>{{ foundUser.email }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="editUser(foundUser)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(foundUser.email)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="selectedUser" class="mt-4">
+    <h3>Editar Usuário</h3>
+    <form (ngSubmit)="updateUser()">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" id="nome" class="form-control" [(ngModel)]="selectedUser.nome" name="Nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="apelido" class="form-label">Apelido</label>
+        <input type="text" id="apelido" class="form-control" [(ngModel)]="selectedUser.apelido" name="Apelido" required>
+      </div>
+      <div class="mb-3">
+        <label for="dataDeNascimento" class="form-label">Data De Nascimento</label>
+        <input type="text" id="dataDeNascimento" class="form-control" [(ngModel)]="selectedUser.dataDeNascimento" name="DataDeNascimento" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" [(ngModel)]="selectedUser.email" name="Email" required>
+      </div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" id="senha" class="form-control" [(ngModel)]="selectedUser.senha" name="Senha" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+    </form>
+  </div>
+</div>

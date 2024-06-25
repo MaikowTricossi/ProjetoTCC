@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Fourtheen_WebAPI.Models;
 using usuario.Repository;
+using System.Globalization;
 using System.Text;
-
 
 public class Startup
 {
@@ -26,6 +26,12 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+
+        services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new JsonDateConverter());
+        });
         
         services.AddDbContext<UsuarioDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -60,7 +66,7 @@ public class Startup
         {
             x.RequireHttpsMetadata = false;
             x.SaveToken = true;
-            x.TokenValidationParameters = new TokenValidationParameters // Nome da classe corrigido
+            x.TokenValidationParameters = new TokenValidationParameters 
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(key),

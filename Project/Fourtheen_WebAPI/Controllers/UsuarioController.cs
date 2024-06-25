@@ -10,9 +10,10 @@ using Fourtheen_WebAPI.Models;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using usuario.Repository;
+using System.Globalization;
 using System.Text;
 using BCrypt.Net;
-using System; 
+using System;
 
 namespace Fourtheen_WebAPI.Controllers
 {
@@ -30,8 +31,6 @@ namespace Fourtheen_WebAPI.Controllers
             _repository = repository;
         }
 
-        // API to select all users
-
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -41,8 +40,6 @@ namespace Fourtheen_WebAPI.Controllers
                     : NoContent();
         }
 
-        // API to get a user according to a given user
-
         [HttpGet("{email}")]
         public async Task<IActionResult> GetByiD(string email)
         {
@@ -51,8 +48,6 @@ namespace Fourtheen_WebAPI.Controllers
                     ? Ok(usuarios)
                     : NotFound("Usuário não encontrado");
         }
-
-        // add a user to the database
 
         [HttpPost]
         public async Task<IActionResult> Post(Usuario usuario)
@@ -76,8 +71,6 @@ namespace Fourtheen_WebAPI.Controllers
 
             return Ok(new { message = "Usuário registrado com sucesso" });
         }
-
-        // API for user login
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] Usuario usuario)
@@ -105,14 +98,10 @@ namespace Fourtheen_WebAPI.Controllers
             }
         }
 
-        // Function to check whether the password entered is the same as the one registered with the bank
-
         private bool VerificaSenha(string senhaEntrada, string senhaBanco)
         {
             return BCrypt.Net.BCrypt.Verify(senhaEntrada, senhaBanco);
         }
-
-        // Function that generates a token for a specific registration
 
         private string GerarToken(Usuario usuario, IConfiguration configuration)
         {
@@ -132,8 +121,6 @@ namespace Fourtheen_WebAPI.Controllers
             return tokenHandler.WriteToken(token);
         }
 
-        // API to update a registration
-
         [HttpPut("{email}")]
         public async Task<IActionResult> Put(string email, Usuario usuario)
         {
@@ -141,18 +128,15 @@ namespace Fourtheen_WebAPI.Controllers
             if(usuarioBanco == null) return NotFound("Usuário não encontrado");
 
             usuarioBanco.Nome = usuario.Nome ?? usuarioBanco.Nome;
-            usuarioBanco.DataNascimento = usuario.DataNascimento != new DateTime()
-            ? usuario.DataNascimento : usuarioBanco.DataNascimento;
+            usuarioBanco.Apelido = usuario.Apelido ?? usuarioBanco.Apelido;
+            usuarioBanco.DataNascimento = usuario.DataNascimento != default ? usuario.DataNascimento : usuarioBanco.DataNascimento;
 
             _repository.AtualizaUsuario(usuarioBanco);
             
             return await _repository.SaveChangesAsync()
                 ? Ok("Usuário atualizado com sucesso")
-                : BadRequest("Erro aoa atualizar o ususario");
-                    
+                : BadRequest("Erro ao atualizar o usuário");
         }
-
-        // API to delete a user
 
         [HttpDelete("{email}")]
         public async Task<IActionResult> Delete(string email)
@@ -164,10 +148,7 @@ namespace Fourtheen_WebAPI.Controllers
 
             return await _repository.SaveChangesAsync()
                 ? Ok("Usuário deletado com sucesso")
-                : BadRequest("Erro ao deletar usuario");
+                : BadRequest("Erro ao deletar usuário");
         }
-
     }
-
 }
-  

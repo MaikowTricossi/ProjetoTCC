@@ -10,7 +10,12 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ImageComponent } from './image/image.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule, HttpHandler, HttpBackend, HttpRequest, HttpXhrBackend } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHandler, HttpBackend, HttpXhrBackend } from '@angular/common/http';
+import { AdmComponent } from './adm/adm.component';
+
+import { DatePipe } from '@angular/common';
+
+import { CadastroService } from './cadastro.service';
 
 export function httpClientFactory(handler: HttpHandler) {
   return new HttpClient(handler);
@@ -25,7 +30,8 @@ export function httpClientFactory(handler: HttpHandler) {
     PerfilComponent,
     CadastroComponent,
     ImageComponent,
-    FooterComponent
+    FooterComponent,
+    AdmComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,7 @@ export function httpClientFactory(handler: HttpHandler) {
     ReactiveFormsModule
   ],
   providers: [
+    DatePipe, CadastroService,
     { provide: HttpBackend, useClass: HttpXhrBackend }, 
     { provide: HttpClient, useFactory: httpClientFactory, deps: [HttpBackend] }
   ],

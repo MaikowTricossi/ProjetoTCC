@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sKVzVC0aWxxBU6E2dGiF4HQ1r3Uf7fR1L+cYtlR3WqzCn9xWe5sNXw/QUrXzyiTUAkyUEQ1IeGJQk+RXFgkFcw==",
+  "dgSpecHash": "TnchGWAZWVlwNrg3gQ4uIX18T6a3P5t/q1bsqVIRod4k6uVueNlFGL/RDsHLgZsOXfvbjwfEBRv4LtHF7b+oDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_webapi\\Fourtheen_WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maiko\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -93,8 +93,8 @@
     "C:\\Users\\maiko\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
-    "C:\\Users\\maiko\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\maiko\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\maiko\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\maiko\\.nuget\\packages\\system.text.json\\8.0.3\\system.text.json.8.0.3.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"

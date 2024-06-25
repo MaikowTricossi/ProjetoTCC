@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { NavComponent } from './nav/nav.component';
 import { ImageComponent } from './image/image.component';
+import { AdmComponent } from './adm/adm.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'mural', component: MuralComponent},
   { path: 'cadastro', component: CadastroComponent},
   { path: 'image', component: ImageComponent},
+  { path: 'adm', component: AdmComponent},
 ];
 
 @NgModule({

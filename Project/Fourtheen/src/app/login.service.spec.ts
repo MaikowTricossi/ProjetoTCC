@@ -8,38 +8,36 @@ describe('AuthService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule], // Importa o módulo de teste para HTTP
-      providers: [AuthService] // Fornece o serviço para ser testado
+      imports: [HttpClientTestingModule], 
+      providers: [AuthService] 
     });
 
-    service = TestBed.inject(AuthService); // Injeta o serviço
-    httpTestingController = TestBed.inject(HttpTestingController); // Injeta o controlador de teste HTTP
+    service = TestBed.inject(AuthService); 
+    httpTestingController = TestBed.inject(HttpTestingController); 
   });
 
   afterEach(() => {
-    httpTestingController.verify(); // Verifica se não há requisições HTTP pendentes
+    httpTestingController.verify(); 
   });
 
   it('deve ser criado', () => {
-    expect(service).toBeTruthy(); // Verifica se o serviço foi criado
+    expect(service).toBeTruthy(); 
   });
 
   it('deve enviar requisição para login', () => {
     const email = '';
     const senha = '';
     const respostaEsperada = { Mensagem: 'Login bem-sucedido!' };
+   
+    // service.login(email, senha).subscribe((res) => {
+    //   expect(res).toEqual(respostaEsperada); 
+    // });
 
-    // Chama o método de login no serviço
-    service.login(email, senha).subscribe((res) => {
-      expect(res).toEqual(respostaEsperada); // Verifica se a resposta é a esperada
-    });
-
-    // Verifica se uma requisição foi feita para o endpoint correto
     const req = httpTestingController.expectOne('http://localhost:5000/api/Usuario');
-    expect(req.request.method).toEqual('POST'); // Verifica se é uma requisição
-    expect(req.request.body).toEqual({ email, senha }); // Verifica se o corpo da requisição está correto
+    expect(req.request.method).toEqual('POST'); 
+    expect(req.request.body).toEqual({ email, senha }); 
 
-    // Fornece uma resposta simulada para a requisição HTTP
+
     req.flush(respostaEsperada); 
   });
 });

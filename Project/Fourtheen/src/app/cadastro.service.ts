@@ -3,8 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-export interface UsuarioCadastro {
+export interface UsuarioCadastro{
+  nome: string;
   apelido: string;
+  dataDeNascimento: string;
   email: string;
   senha: string;
 }
@@ -13,7 +15,7 @@ export interface UsuarioCadastro {
   providedIn: 'root',
 })
 export class CadastroService {
-  private apiUrl = 'http://localhost:5000/api/usuario'; 
+  private apiUrl = 'https://localhost:5001/api/Usuario'; 
 
   constructor(private http: HttpClient) {}
 
@@ -26,3 +28,7 @@ export class CadastroService {
     );
   }
 }
+
+
+
+

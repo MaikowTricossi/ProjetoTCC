@@ -1,4 +1,7 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace Fourtheen_WebAPI.Models
 {
     public class Usuario
@@ -6,12 +9,13 @@ namespace Fourtheen_WebAPI.Models
         public int Id { get; set; }
 
         public string? Nome { get; set; }
-        
-        public DateTime? DataNascimento { get; set; }
-
-        public string? Email { get; set; }
 
         public string? Apelido { get; set; }
+
+        [JsonConverter(typeof(JsonDateConverter))]
+        public DateTime DataNascimento { get; set; }
+
+        public string? Email { get; set; }
 
         public string? Senha { get; set; }
 

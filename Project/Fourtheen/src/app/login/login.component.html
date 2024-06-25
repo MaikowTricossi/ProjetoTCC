@@ -20,6 +20,9 @@
               </div>
                 <a href="#!">Forgot password?</a>
             </div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+              {{ errorMessage }}
+            </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Sign in</button>
           </form>
         </div>
@@ -27,4 +30,3 @@
     </div>
   </section>
 </div>
-
