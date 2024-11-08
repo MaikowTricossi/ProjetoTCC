@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{9C658CEF-8374-48CC-8E97-B74DD39EE2F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fourtheen_WebAPI", "Project\Fourtheen_WebAPI\Fourtheen_WebAPI.csproj", "{862F1FC2-3166-4319-A91D-C863F113EFB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fourtheen", "Fourtheen", "{CE5F386B-DF0E-497C-81C4-C00783D3768C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FourtheenASPNETCore", "FourtheenASPNETCore", "{B5786520-7A95-4E98-8C93-C5665D25CBE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fourtheen.API", "Project\Fourtheen\FourtheenASPNETCore\Fourtheen.API\Fourtheen.API.csproj", "{1BBA66AE-A423-4B58-B337-C585AB848405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{862F1FC2-3166-4319-A91D-C863F113EFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862F1FC2-3166-4319-A91D-C863F113EFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862F1FC2-3166-4319-A91D-C863F113EFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862F1FC2-3166-4319-A91D-C863F113EFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBA66AE-A423-4B58-B337-C585AB848405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBA66AE-A423-4B58-B337-C585AB848405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBA66AE-A423-4B58-B337-C585AB848405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBA66AE-A423-4B58-B337-C585AB848405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{862F1FC2-3166-4319-A91D-C863F113EFB3} = {9C658CEF-8374-48CC-8E97-B74DD39EE2F0}
+		{CE5F386B-DF0E-497C-81C4-C00783D3768C} = {9C658CEF-8374-48CC-8E97-B74DD39EE2F0}
+		{B5786520-7A95-4E98-8C93-C5665D25CBE2} = {CE5F386B-DF0E-497C-81C4-C00783D3768C}
+		{1BBA66AE-A423-4B58-B337-C585AB848405} = {B5786520-7A95-4E98-8C93-C5665D25CBE2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FC6EDB0-4890-41A5-9091-FC3AA107E8E2}
+	EndGlobalSection
+EndGlobal

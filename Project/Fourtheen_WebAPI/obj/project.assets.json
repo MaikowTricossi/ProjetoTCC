@@ -4514,32 +4514,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maiko\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\maiko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\maiko\\OneDrive\\Documentos\\ProjetoTCC\\project\\Fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
       "projectName": "Fourtheen_WebAPI",
-      "projectPath": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
+      "projectPath": "C:\\Users\\maiko\\OneDrive\\Documentos\\ProjetoTCC\\project\\Fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
       "packagesPath": "C:\\Users\\maiko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\maiko\\OneDrive\\Documentos\\ProjetoTCC\\project\\Fourtheen_WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\maiko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\maiko\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4618,7 +4610,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.409\\RuntimeIdentifierGraph.json"
       }
     }
   }

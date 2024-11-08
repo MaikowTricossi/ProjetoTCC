@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { CadastroService, UsuarioCadastro } from '../cadastro.service';
+import { CadastroService, UsuarioCadastro } from '../service/cadastro.service';
 import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({

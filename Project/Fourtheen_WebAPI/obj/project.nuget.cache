@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TnchGWAZWVlwNrg3gQ4uIX18T6a3P5t/q1bsqVIRod4k6uVueNlFGL/RDsHLgZsOXfvbjwfEBRv4LtHF7b+oDw==",
+  "dgSpecHash": "1r8D0e2YHdAF1Z6RhWZcwXTrXSwuYmz9+FBtDOwMOIZgOoaRgJuFJeLNgf2pNkMAmKmw9Ycl1lb+x1AXh1y5wQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maiko\\OneDrive\\Documentos\\Fourtheen\\project\\fourtheen_WebAPI\\Fourtheen_WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\maiko\\OneDrive\\Documentos\\ProjetoTCC\\project\\fourtheen_webapi\\Fourtheen_WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maiko\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maiko\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

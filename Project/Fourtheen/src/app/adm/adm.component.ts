@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdmService } from '../adm.service';
+import { AdmService } from '../service/adm.service';
 import { CadastroModel } from '../models/CadastroModel';
 
 @Component({
